@@ -1,0 +1,14 @@
+./src/mgimo-x/node_modules/
+./src/mgimo-x/.expo/
+./src/mgimo-x/dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+./src/mgimo-x/web-build/
+
+# macOS
+.DS_Store
