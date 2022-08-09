@@ -25,10 +25,9 @@ export default function App() {
     }
 
     return (
-        <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
             <Home />
-            <font.Icon name="plane" />
-        </SafeAreaView>
+        </View>
     );
 }
 
