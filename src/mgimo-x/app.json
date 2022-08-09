@@ -4,12 +4,11 @@
         "slug": "MGIMO-X-Odintsovo",
         "version": "1.0.0",
         "orientation": "portrait",
-        "icon": "./assets/icon.png",
+        "icon": "./assets/icons/logo-mgimo.png",
         "userInterfaceStyle": "light",
         "splash": {
-            "image": "./assets/splash.png",
             "resizeMode": "contain",
-            "backgroundColor": "#ffffff"
+            "backgroundColor": "#000"
         },
         "updates": {
             "fallbackToCacheTimeout": 0
@@ -20,8 +19,8 @@
         },
         "android": {
             "adaptiveIcon": {
-                "foregroundImage": "./assets/adaptive-icon.png",
-                "backgroundColor": "#FFFFFF"
+                "foregroundImage": "./assets/icons/logo-mgimo.png",
+                "backgroundColor": "#000"
             }
         },
         "web": {
