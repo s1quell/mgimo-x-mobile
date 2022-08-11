@@ -3,9 +3,8 @@
 // Expo Fonts - add custom app font
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
-import styled from "styled-components/native";
-import { Home } from "./screens/home/home";
-import { Loading } from "./screens/loading/loading";
+
+import { Navigation } from "./navigation/Navigation";
 
 // Importing font's settings
 import { useFonts } from "expo-font";
@@ -14,21 +13,17 @@ import * as font from "./settings/fonts";
 export default function App() {
     // Добавление сторонних шрифтов в программу
     const [loaded] = useFonts({
-        Montserrat: require("./assets/fonts/Montserrat/Montserrat-Regular.ttf"),
+        Montserrat: require("./assets/fonts/Montserrat/Montserrat-Medium.ttf"),
         "Montserrat-Bold": require("./assets/fonts/Montserrat/Montserrat-Bold.ttf"),
         "Montserrat-Black": require("./assets/fonts/Montserrat/Montserrat-Black.ttf"),
         Icons: require("./assets/fonts/Icons/fontello.ttf"),
     });
 
     if (!loaded) {
-        return <Loading />;
+        return <View></View>;
     }
 
-    return (
-        <View style={styles.container}>
-            <Home />
-        </View>
-    );
+    return <Navigation />;
 }
 
 const styles = StyleSheet.create({
