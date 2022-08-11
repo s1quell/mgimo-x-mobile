@@ -1,5 +1,8 @@
 export const HEADER_COLOR = "#fff";
 export const REGULAR_FONT_COLOR = "#1A1C20";
+
+export const FONT_GRAY_COLOR = "#B6B6B6";
+
 export const MGIMO_COLOR = "#282D44";
 export const SHADOW_COLOR = "#1A1C20";
 
