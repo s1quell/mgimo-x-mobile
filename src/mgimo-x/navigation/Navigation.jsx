@@ -1,12 +1,14 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import { HomeScreen } from "../screens/home/HomeScreen";
-import { ScheduleScreen } from "../screens/Schedule Screen/ScheduleScreen";
-import { MapScreen } from "../screens/Map Screen/MapScreen";
-import { AccountScreen } from "../screens/Account Screen/AccountScreen";
+import { ScheduleScreen } from "../screens/Schedule/ScheduleScreen";
+import { MapScreen } from "../screens/Map/MapScreen";
+import { AccountScreen } from "../screens/Account/AccountScreen";
+import { ChatScreen } from "../screens/Chat/ChatScreen";
 
 import { HomeNavigator } from "../navigation/stack/HomeNavigator";
+
+import * as colors from "../settings/colors";
 
 import * as font from "../settings/fonts";
 
@@ -32,6 +34,9 @@ export const Navigation = () => {
                             case "Карта":
                                 iconName = "map-solid";
                                 break;
+                            case "Чаты":
+                                iconName = "message";
+                                break;
                             case "Аккаунт":
                                 iconName = "user";
                                 break;
@@ -50,14 +55,19 @@ export const Navigation = () => {
                             />
                         );
                     },
+                    tabBarStyle: {
+                        backgroundColor: "#FFF",
+                    },
                     headerShown: false,
-                    tabBarActiveTintColor: "tomato",
+
+                    tabBarActiveTintColor: colors.BUTTON_COLOR,
                     tabBarInactiveTintColor: "gray",
                 })}
             >
                 <Tab.Screen name="Главная" component={HomeNavigator} />
                 <Tab.Screen name="Расписание" component={ScheduleScreen} />
                 <Tab.Screen name="Карта" component={MapScreen} />
+                <Tab.Screen name="Чаты" component={ChatScreen} />
                 <Tab.Screen name="Аккаунт" component={AccountScreen} />
             </Tab.Navigator>
         </NavigationContainer>

@@ -2,7 +2,10 @@
 
 export const styles = {
     blockQuote: {
-        marginLeft: 10,
+        backgroundColor: "#E8E9EC",
+        padding: 5,
+        marginLeft: 0,
+        fontFamily: "Proxima-Italic",
         opacity: 0.8,
     },
     codeBlock: {
@@ -12,7 +15,6 @@ export const styles = {
     },
     del: {
         textDecorationLine: "line-through",
-        fontFamily: "Montserrat",
     },
     em: {
         fontStyle: "italic",
@@ -31,12 +33,12 @@ export const styles = {
         fontFamily: "Montserrat-Bold",
     },
     heading2: {
-        fontSize: 10,
-        marginTop: 20,
-        marginBottom: 20,
+        fontSize: 20,
+        marginTop: 10,
+        marginBottom: 10,
         marginLeft: 0,
         marginRight: 0,
-        fontFamily: "Montserrat-Bold",
+        fontFamily: "Proxima-Bold",
     },
     heading3: {
         fontSize: 20,
@@ -107,12 +109,13 @@ export const styles = {
     },
     paragraph: {
         marginTop: 10,
+        flex: 1,
         marginBottom: 10,
-        fontFamily: "Montserrat",
-        textAlign: "justify",
+        fontSize: 19,
+        fontFamily: "Proxima",
     },
     strong: {
-        fontWeight: "700",
+        fontFamily: "Proxima-Bold",
     },
     table: {
         margin: 4,

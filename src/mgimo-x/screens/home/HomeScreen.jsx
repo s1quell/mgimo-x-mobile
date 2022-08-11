@@ -108,6 +108,7 @@ export const HomeScreen = ({ navigation }) => {
                             navigation.navigate("Статья", {
                                 title: item.title,
                                 pictureUrl: item.pictureUrl,
+                                author: item.author,
                             });
                         }}
                     />

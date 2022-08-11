@@ -1,9 +1,9 @@
 import { View, Text } from "react-native";
 
-export const ScheduleScreen = () => {
+export const ChatScreen = () => {
     return (
         <View>
-            <Text>Hello from Schedule Screen</Text>
+            <Text>Hello from Chat Screen</Text>
         </View>
     );
 };

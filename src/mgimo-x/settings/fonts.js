@@ -9,7 +9,7 @@ export const HEADER_2 = 18;
 
 // #endregion
 
-export const ICON_SIZE = 20;
+export const ICON_SIZE = 18;
 export const REGULAR_TEXT = 14;
 
 export const Icon = createIconSetFromFontello(

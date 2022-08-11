@@ -6,11 +6,12 @@ export const News = ({ title, onPress }) => {
     const [date, setDate] = React.useState("12.05.2022");
 
     const pictureUrl =
-        "https://odin.mgimo.ru/images/news4720/dod-odin_19-03-22_012.jpg";
+        "https://mgimo.ru/upload/iblock/338/dod-odin-18-02-21_113.jpg";
+    const author = "Студенческий совет * 22.05.2022";
 
     // Метод вызывается когда выбирается статья и передаются параметры для //полной статьи
     const pressing = () => {
-        onPress({ title, pictureUrl });
+        onPress({ title, pictureUrl, author });
     };
 
     return (

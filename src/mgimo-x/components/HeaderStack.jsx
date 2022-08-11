@@ -1,5 +1,7 @@
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableHighlight, Text } from "react-native";
 import { Icon, ICON_SIZE } from "../settings/fonts";
+
+import * as colors from "../settings/colors";
 
 // Верхняя часть для того, чтобы была кнопка вернуться обратно
 export const HeaderStack = ({ navigator }) => {
@@ -7,13 +9,31 @@ export const HeaderStack = ({ navigator }) => {
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity
+            <TouchableHighlight
                 onPress={() => {
                     navigator.goBack();
                 }}
+                activeOpacity={0.9}
+                style={styles.block}
             >
-                <Icon name="angel-left" size={25} color="#000" />
-            </TouchableOpacity>
+                <View style={styles.block}>
+                    <Icon
+                        name="angel-left"
+                        size={22}
+                        color={colors.FONT_DARK_COLOR}
+                        style={{ marginRight: 5 }}
+                    />
+                    <Text
+                        style={{
+                            fontSize: 14,
+                            fontFamily: "Montserrat",
+                            color: colors.FONT_DARK_COLOR,
+                        }}
+                    >
+                        Назад
+                    </Text>
+                </View>
+            </TouchableHighlight>
         </View>
     );
 };
@@ -21,9 +41,19 @@ export const HeaderStack = ({ navigator }) => {
 const styles = StyleSheet.create({
     container: {
         position: "absolute",
-        top: 45,
+        top: 50,
         height: 50,
         width: "100%",
-        paddingLeft: 28,
+        paddingLeft: 20,
+    },
+    block: {
+        height: 40,
+        width: 90,
+        borderRadius: 50,
+        justifyContent: "center",
+        flexDirection: "row",
+        alignItems: "center",
+        backgroundColor: "#fff",
+        opacity: 0.9,
     },
 });
